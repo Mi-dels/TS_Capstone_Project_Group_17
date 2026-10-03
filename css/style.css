@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* css light mode background colours */
+:root {
+  --bg-primary: #f6f8ff;
+  --search-bar: #ffffff;
+  --search-button: #0079ff;
+  --profile-section: #ffffff;
+  --stats-section: #f6f8ff;
+  --table-header: #164baf;
+
+  /* css light mode text colours */
+  --header-dark: #4b6a9b;
+  --search-placeholder: #4b6a9b;
+  --search-button: #ffffff;
+  --planet-name: #2b3442;
+  --planet-type: #0079ff;
+  --planet-descrption: #4b6a9b;
+  --table-text-h1: #164baf;
+  --table-description: #0f2a44;
+  --table-caption: #0f2a44;
+  --table-text-header: #ffffff;
+  --table-data-cell: #212121;
+  --footer-text: #4b6a9b;
+
+  /* css dark mode background colours */
+  /* css dark mode text colours*/
+  /* css font family */
+  --heading-font: "Space Mono", sans-serif;
+  --table-and-footer-font: "Inter", sans-serif;
+
+  /* css font style */
+  --primary-font-style: bold;
+
+  /* css font weight */
+}
