@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-/* css light mode background colours */
 :root {
+  /* css light mode background colours */
   --bg-primary: #f6f8ff;
   --search-bar: #ffffff;
   --search-button: #0079ff;
@@ -28,13 +28,43 @@
   --footer-text: #4b6a9b;
 
   /* css dark mode background colours */
+  --dark-background-colour: #141d2f;
+  --dark-search-bar: #1e2a47;
+  --dark-profile-section: #1e2a47;
+  --dark-stats-section: #141d2f;
+  --dark-table-header: #141d2f;
+
   /* css dark mode text colours*/
+  --header-light: #90a4d4;
+  --dark-search-placeholder: #ffffff;
+  --dark-search-button: #ffffff;
+  --dark-planet-name: #ffffff;
+  --dark-planet-type: #0079ff;
+  --dark-planet-description: #4b6a9b;
+  --dark-stats-section: #ffffff;
+  --dark-table-text-h1: #ffffff;
+  --dark-table-description: #90a4d4;
+  --dark-table-caption: #d1e3ff;
+  --dark-table-text-header: #212121;
+  --dark-table-data-cell: #212121;
+  --dark-footer-section: #d1e3ff;
+
   /* css font family */
   --heading-font: "Space Mono", sans-serif;
   --table-and-footer-font: "Inter", sans-serif;
 
-  /* css font style */
-  --primary-font-style: bold;
-
   /* css font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* css font size */
+  --font-size-xs: 13px;
+  --font-size-sm: 15px;
+  --font-size-base: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 22px;
+  --font-size-xl: 26px;
+  --font-size-2xl: 32px;
 }
