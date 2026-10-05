@@ -3,202 +3,219 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Planet Explorer</title>
 
+    <!-- Fonts: one preconnect pair and one combined stylesheet link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-   <link rel="apple-touch-icon" sizes="180x180" href="images/Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/Favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/Favicon/site.webmanifest">
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/Favicon/site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    
     <section class="container">
-        <header>
-            <div class="logo">
-            <a href="index.html">
-                <img src="images/logo_black.png" alt="Planet Logo">
-            </a>
-            </div>
+      <header>
+        <figure class="logo">
+          <a href="index.html">
+            <img src="images/logo_black.png" alt="Planet Logo" />
+          </a>
+        </figure>
 
-            <div class="toggle">
-                <a href="#" class="switch">
-                <span class="dark">Dark</span>
-                <span class="moon">
-                    <img src="images/Theme Icon.png" alt="Moon toggle">
-                </span>
-                </a>
-            </div>
-        </header>
+        <div class="toggle">
+          <button type="button" class="switch" aria-label="Toggle dark mode">
+            <span class="dark">Dark</span>
+            <span class="moon">
+              <img src="images/Theme-Icon.png" alt="" />
+            </span>
+          </button>
+        </div>
+      </header>
 
-        <main>
-            <div class="search-container">
-                <img src="Images/Search Icon.png" alt="search icon">
-                <input type="text" placeholder="Search planet name">
-                <a href="#" class="btn">Search</a>
-            </div>
+      <main>
+        <div class="search-container">
+          <img src="images/Search-Icon.png" alt="" />
+          <input
+            type="text"
+            placeholder="Search planet name"
+            aria-label="Search planet name"
+          />
+          <button type="button" class="btn">Search</button>
+        </div>
 
-            <section class="hero">
+        <section class="hero">
+          <div class="planet-card">
+            <figure class="planet-image">
+              <img
+                src="images/Profile-Picture.png"
+                alt="Earth"
+                class="space-img"
+              />
+            </figure>
 
-                <div class="Planet-card">
-                    <div class="planet-image">
-                        <img src="images/Profile Picture.png" alt="" class="space-img">
-                    </div>
+            <div class="planet-info">
+              <h1>Earth</h1>
+              <span class="planet-type">Terrestrial</span>
 
-                    <div class="planet-info">
-                    <h1>Earth</h1>
-                    <span class="planet-type">Terrestial</span>
-                        <div class="description">
-                        <p>The only known planet to support life, with liquid 
-                            <br>water on its surface.</p>
-                        </div>
+              <div class="description">
+                <p>
+                  The only known planet to support life, with liquid water on
+                  its surface.
+                </p>
+              </div>
 
-                        <div class="main-stats">
-                            
-                            <div class="stat">
-                                <span>Gravity</span>
-                                <strong>9.8</strong>
-                            </div>
-
-                            <div class="stat">
-                                <span>Mass</span>
-                                <strong>0.00315</strong>
-                            </div>
-
-                            <div class="stat">
-                                <span>Period</span>
-                                <strong>365</strong>
-                            </div>
-                        </div>
-
-                        <div class="oter-stats">
-
-                            <div class="detail">
-                                <img src="images/" alt="thermometer icon">
-                                <span>288</span>
-                            </div>
-
-                            <div class="detail">
-                                <img src="images/Half moon.png" alt="moon icon">
-                                <span>1</span>
-                            </div>
-
-                            <div class="detail">
-                                <img src="images/Diameter.png" alt="circle icon">
-                                <span>12756</span>
-                            </div>
-
-                            <div class="detail">
-                                <img src="images/Company Icon.png" alt="sun icon">
-                                <span>288</span>
-
-                            </div>
-                        </div>
-                    </div>
+              <div class="main-stats">
+                <div class="stat">
+                  <span>Gravity</span>
+                  <strong>9.8</strong>
                 </div>
+                <div class="stat">
+                  <span>Mass</span>
+                  <strong>0.00315</strong>
+                </div>
+                <div class="stat">
+                  <span>Period</span>
+                  <strong>365</strong>
+                </div>
+              </div>
 
-            </section class="table">
-            <h2>Planetary Facts at a Glance</h2>
-            <p>Below is a comparative table of major planets in our solar system. The data highlights key
-            <br>physical properties used by astronomers and researchers worldwide.</p>
+              <div class="other-stats">
+                <div class="detail">
+                  <img src="images/Thermometer.png" alt="Thermometer icon" />
+                  <span>288</span>
+                </div>
+                <div class="detail">
+                  <img src="images/Half-moon.png" alt="Moon icon" />
+                  <span>1</span>
+                </div>
+                <div class="detail">
+                  <img src="images/Diameter.png" alt="Diameter icon" />
+                  <span>12756</span>
+                </div>
+                <div class="detail">
+                  <img src="images/Sun-Icon.png" alt="Sun icon" />
+                  <span>288</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <caption> Data about the planets of our solar system (Planetary facts taken from Nasa)</caption>
+        <section class="table">
+          <h2>Planetary Facts at a Glance</h2>
+          <p>
+            Below is a comparative table of major planets in our solar system.
+            The data highlights key physical properties used by astronomers and
+            researchers worldwide.
+          </p>
 
-            <table>
-                <tr>
-                    <th colspan="2"></th>
-                    <th>Name</th>
-                    <th>Mass (10 24kg)</th>
-                    <th>Diameter (km)</th>
-                </tr>
+          <table>
+            <caption>
+              Data about the planets of our solar system (planetary facts taken
+              from NASA)
+            </caption>
+            <thead>
+              <tr>
+                <th colspan="2" scope="col">Group</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mass (10<sup>24</sup> kg)</th>
+                <th scope="col">Diameter (km)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="4" colspan="2" scope="rowgroup">
+                  Terrestrial planets
+                </th>
+                <td>Mercury</td>
+                <td>0.330</td>
+                <td>4,879</td>
+              </tr>
+              <tr>
+                <td>Venus</td>
+                <td>4.87</td>
+                <td>12,104</td>
+              </tr>
+              <tr>
+                <td>Earth</td>
+                <td>5.97</td>
+                <td>12,756</td>
+              </tr>
+              <tr>
+                <td>Mars</td>
+                <td>0.642</td>
+                <td>6,792</td>
+              </tr>
 
-                <tr>
-                    <th rowspan="4" colspan="2">Terrestial planets</td>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
+              <tr>
+                <th rowspan="4" scope="rowgroup">Jovian planets</th>
+                <th rowspan="2" scope="rowgroup">Gas giants</th>
+                <td>Jupiter</td>
+                <td>1,898</td>
+                <td>142,984</td>
+              </tr>
+              <tr>
+                <td>Saturn</td>
+                <td>568</td>
+                <td>120,536</td>
+              </tr>
+              <tr>
+                <th rowspan="2" scope="rowgroup">Ice giants</th>
+                <td>Uranus</td>
+                <td>86.8</td>
+                <td>51,118</td>
+              </tr>
+              <tr>
+                <td>Neptune</td>
+                <td>102</td>
+                <td>49,528</td>
+              </tr>
 
-                <tr>
-                    <td>Venus</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
+              <tr>
+                <th colspan="2" scope="rowgroup">Dwarf planets</th>
+                <td>Pluto</td>
+                <td>0.0130</td>
+                <td>2,376</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
 
-                <tr>
-                    <td>Earth</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
+      <footer>
+        <h2>About</h2>
+        <p>Contributor's name</p>
+        <p>Contributor's name</p>
+        <p>Contributor's name</p>
+        <p>Contributor's name</p>
+        <p>Contributor's name</p>
+        <p>Contributor's name</p>
 
-                <tr>
-                    <td>Mars</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
-
-                <tr>
-                    <th rowspan="4">Jovian <br>planets</td>
-                    <th rowspan="2">Gas Giants</td>
-                    <td>Jupiter</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
-
-                <tr>
-                    <td>Saturn</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
-
-                <tr>
-                    <th rowspan="2">Ice Giants</td>
-                    <td>Uranus</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
-
-                <tr>
-                    <td>Neptune</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">Dwarf Giants</td>
-                    <td>Mercury</td>
-                    <td>0.330</td>
-                    <td>4,878</td>
-                </tr>
-            </table>
-           </section>
-        </main>
-
-        <footer>
-            <h2>About</h2>
-            <p>Contributor's name</p>
-            <p>Contributor's name</p>
-            <p>Contributor's name</p>
-            <p>Contributor's name</p>
-            <p>Contributor's name</p>
-            <p>Contributor's name</p>
-
-            <p>©️ Designed by <a href="http://amakandukwu.com/">Amaka N</a></p>
-            <p>Built by TS_Academy_Group_17. All rights reserved</p>
-            <p>TSAcademy</p>
-        </footer>
+        <p>&copy; Designed by <a href="http://amakandukwu.com/">Amaka N</a></p>
+        <p>Built by TS_Academy_Group_17. All rights reserved.</p>
+        <p>TSAcademy</p>
+      </footer>
+    </section>
 
     <script src="scripts/scripts.js"></script>
   </body>
