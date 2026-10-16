@@ -33,3 +33,43 @@ function displayPlanet(planet) {
   setField("diameter", planet.diameter);
   setField("distance", planet.distanceFromSun);
 }
+
+// ----- Error state -----
+function showError() {
+  planetCard.hidden = true;
+  errorMessage.hidden = false;
+  searchStatus.textContent = "No results";
+}
+
+// ----- Search -----
+searchForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const searchValue = searchInput.value.trim().toLowerCase();
+  if (!searchValue) return;
+
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) throw new Error("Request failed");
+
+    const planets = await response.json();
+    const planet = planets.find(
+      (item) => item.name.toLowerCase() === searchValue,
+    );
+    
+    if (planet) {
+      errorMessage.hidden = true;
+      planetCard.hidden = false;
+      searchStatus.textContent = "";
+      displayPlanet(planet);
+    } else {
+      showError();
+    }
+  } catch (error) {
+    showError();
+  }
+});
+const THEME_FILES = {
+  dark: "css/style.css",
+  light: "css/lightmode.css", // <- change to your light CSS file name
+};
