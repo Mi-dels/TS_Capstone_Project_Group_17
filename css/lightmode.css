@@ -12,6 +12,7 @@
   --profile-section: #ffffff;
   --stats-section: #f6f8ff;
   --table-header: #164baf;
+  --card-shadow: #4660BB;
 
   /* css light mode text colours */
   --header-dark: #4b6a9b;
@@ -108,18 +109,17 @@ header {
   border-color: var(--bg-primary);
   display: flex;
   align-items: center;
-  gap: 20px;
+  /* gap: 16px; */
   border-style: hidden;
-  align-items: center;
   width: 86px;
   height: 20px;
+  border-radius: 6px;
 }
-.light {
+.dark {
   color: var(--header-dark);
   font-family: var(--heading-font);
   /* font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xs); */
-  font-family: var(--heading-font);
   width: 50px;
   height: 15px;
 }
@@ -129,6 +129,7 @@ header {
   filter: brightness(0) saturate(100%) invert(38%) sepia(20%) saturate(900%)
     hue-rotate(176deg);
 }
+
 
 /* Css search bar styling */
 .search-container {
@@ -140,6 +141,9 @@ header {
   height: 69px;
   border-radius: 16px;
   margin-bottom: 40px;
+  box-shadow:
+        0 12px 25px rgba(70, 96, 187, 0.2),
+        0 4px 10px rgba(70, 96, 187, 0.05);
 }
 .search-name {
   display: flex;
@@ -189,6 +193,12 @@ input::placeholder {
   background-color: #60abff;
 }
 
+.switch:focus,
+.btn:focus{
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
 /* CSS planet description */
 .hero {
   background-color: var(--profile-section);
@@ -204,6 +214,9 @@ input::placeholder {
   /* box-shadow: var(--card-shadow); */
   margin-bottom: 40px;
   /* box-sizing: border-box; */
+  box-shadow:
+        0 12px 25px rgba(70, 96, 187, 0.2),
+        0 4px 10px rgba(70, 96, 187, 0.05);
 }
 .planet-img {
   margin: 0;
@@ -349,6 +362,7 @@ input::placeholder {
   max-width: 420px;
   margin: 0 auto;
 }
+
 
 /* CSS Table styling */
 .table {
