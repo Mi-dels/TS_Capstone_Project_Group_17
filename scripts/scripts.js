@@ -73,3 +73,18 @@ const THEME_FILES = {
   dark: "css/style.css",
   light: "css/lightmode.css", // <- change to your light CSS file name
 };
+
+const themeLink = document.getElementById("themeStylesheet");
+const lightBtn = document.querySelector('[aria-label="Toggle light mode"]');
+const darkBtn = document.querySelector('[aria-label="Toggle dark mode"]');
+
+function setTheme(mode) {
+  themeLink.href = THEME_FILES[mode];
+  localStorage.setItem("theme", mode);
+}
+
+lightBtn.addEventListener("click", () => setTheme("light"));
+darkBtn.addEventListener("click", () => setTheme("dark"));
+
+// Remember the last choice (dark by default)
+setTheme(localStorage.getItem("theme") || "dark");
