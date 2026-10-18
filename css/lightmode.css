@@ -16,6 +16,7 @@
   --profile-section: #ffffff;
   --stats-section: #f6f8ff;
   --table-header: #164baf;
+  --card-shadow: #4660BB;
 
   /* css light mode text colours */
   --header-dark: #4b6a9b;
@@ -120,11 +121,28 @@ header {
 .light {
   color: var(--header-light);
   font-family: var(--heading-font);
+  border-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  /* gap: 16px; */
+  border-style: hidden;
+  width: 86px;
+  height: 20px;
+  border-radius: 6px;
+}
+.dark {
+  color: var(--header-dark);
+  font-family: var(--heading-font);
+  /* font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs); */
+  width: 50px;
+  height: 15px;
 }
 .sun_img {
   width: 20px;
   height: 15px;
 }
+
 
 /* Css search bar styling */
 
@@ -138,6 +156,9 @@ header {
   height: 69px;
   border-radius: 16px;
   margin-bottom: 40px;
+  box-shadow:
+        0 12px 25px rgba(70, 96, 187, 0.2),
+        0 4px 10px rgba(70, 96, 187, 0.05);
 }
 .search-name {
   display: flex;
@@ -200,6 +221,7 @@ input {
 
 .switch:focus,
 .btn:focus {
+.btn:focus{
   outline: 2px solid #3498db;
   outline-offset: 2px;
 }
@@ -233,6 +255,14 @@ input {
   padding: 50px;
   border-radius: 20px;
   margin-bottom: 40px;
+  /* box-sizing: border-box; */
+  box-shadow:
+        0 12px 25px rgba(70, 96, 187, 0.2),
+        0 4px 10px rgba(70, 96, 187, 0.05);
+}
+.planet-img {
+  margin: 0;
+  align-self: self-start;
 }
 .space-img {
   width: 117px;
@@ -336,6 +366,7 @@ input {
   font-family: var(--heading-font);
   font-size: var(--font-size-sm);
 }
+
 
 /* CSS Table styling */
 
@@ -484,3 +515,6 @@ footer {
     max-width: 704px;
   }
 }
+}
+
+/* Phone Mobile responsiveness */
