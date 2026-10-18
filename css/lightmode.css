@@ -120,6 +120,25 @@ header {
 .light {
   color: var(--header-light);
   font-family: var(--heading-font);
+<<<<<<< HEAD
+=======
+  border-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  /* gap: 16px; */
+  border-style: hidden;
+  width: 86px;
+  height: 20px;
+  border-radius: 6px;
+}
+.dark {
+  color: var(--header-dark);
+  font-family: var(--heading-font);
+  /* font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs); */
+  width: 50px;
+  height: 15px;
+>>>>>>> d2f514c199c61a466fd21293a88c734c74c0a842
 }
 .sun_img {
   width: 20px;
@@ -200,6 +219,10 @@ input {
 
 .switch:focus,
 .btn:focus {
+<<<<<<< HEAD
+=======
+.btn:focus{
+>>>>>>> d2f514c199c61a466fd21293a88c734c74c0a842
   outline: 2px solid #3498db;
   outline-offset: 2px;
 }
@@ -233,6 +256,17 @@ input {
   padding: 50px;
   border-radius: 20px;
   margin-bottom: 40px;
+<<<<<<< HEAD
+=======
+  /* box-sizing: border-box; */
+  box-shadow:
+        0 12px 25px rgba(70, 96, 187, 0.2),
+        0 4px 10px rgba(70, 96, 187, 0.05);
+}
+.planet-img {
+  margin: 0;
+  align-self: self-start;
+>>>>>>> d2f514c199c61a466fd21293a88c734c74c0a842
 }
 .space-img {
   width: 117px;
@@ -483,4 +517,11 @@ footer {
   .container {
     max-width: 704px;
   }
+<<<<<<< HEAD
 }
+=======
+}
+}
+
+/* Phone Mobile responsiveness */
+>>>>>>> d2f514c199c61a466fd21293a88c734c74c0a842
