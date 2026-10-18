@@ -16,7 +16,6 @@
   --profile-section: #ffffff;
   --stats-section: #f6f8ff;
   --table-header: #164baf;
-  --card-shadow: #4660BB;
 
   /* css light mode text colours */
   --header-dark: #4b6a9b;
@@ -143,7 +142,6 @@ header {
   height: 15px;
 }
 
-
 /* Css search bar styling */
 
 .search-container {
@@ -156,9 +154,6 @@ header {
   height: 69px;
   border-radius: 16px;
   margin-bottom: 40px;
-  box-shadow:
-        0 12px 25px rgba(70, 96, 187, 0.2),
-        0 4px 10px rgba(70, 96, 187, 0.05);
 }
 .search-name {
   display: flex;
@@ -367,7 +362,6 @@ input {
   font-size: var(--font-size-sm);
 }
 
-
 /* CSS Table styling */
 
 .table {
@@ -516,5 +510,6 @@ footer {
   }
 }
 }
+
 
 /* Phone Mobile responsiveness */
