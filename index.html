@@ -31,7 +31,8 @@
       href="images/Favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="images/Favicon/site.webmanifest" />
-    <link rel="stylesheet" href="css/lightmode.css" />
+    <link id="themeStylesheet" rel="stylesheet" href="css/lightmode.css" />
+    <!-- <link id="themeStylesheet"rel="stylesheet" href="css/style.css" /> -->
   </head>
   <body>
     <section class="container">
@@ -50,51 +51,61 @@
         <div class="toggle">
           <button type="button" class="switch" aria-label="Toggle dark mode">
             <span class="dark">Dark</span>
-            <span class="moon">
-              <img src="images/Theme-Icon.png" alt="" />
-            </span>
+
+            <img src="images/Theme Icon.png" alt="" class="moon" />
           </button>
         </div>
+        <div class="toggle2">
+          <button type="button" class="switch" aria-label="Toggle light mode">
+            <span class="light">Light</span>
 
-        <button type="button" class="switch" aria-label="Toggle dark mode">
-          <span class="light">DARK</span>
-          <img
-            class="sun_img"
-            src="images/Half moon.png  "
-            alt="Switch to dark mode"
-          />
-        </button>
+            <img src="images/Theme Icon (1).png" alt="" class="sun_img" />
+          </button>
+        </div>
       </header>
 
       <main>
-        <div class="search-container">
+        <form id="searchForm" class="search-container">
           <div class="search-name">
             <img src="images/Search Icon.png" alt="" class="search-icon" />
             <input
               type="text"
+              id="planetSearch"
               placeholder="Search planet name..."
               aria-label="Search planet name"
             />
+            <span id="searchStatus"></span>
           </div>
-          <button type="button" class="btn">Search</button>
+          <button type="submit" class="btn">Search</button>
+        </form>
+
+        <!-- Error message -->
+        <div id="errorMessage" class="error-message" hidden>
+          <h3>No results found!</h3>
+          <p>
+            We couldn't find any planet matching your search. Please
+            double-check the name and try again.
+          </p>
         </div>
 
-        <section class="hero">
+        <section class="hero" id="planetCard">
           <figure class="planet-image">
             <img
               src="images/Profile Picture.png"
               alt="Earth"
               class="space-img"
+              id="planetImage"
             />
           </figure>
+
           <div class="planet-card">
             <div class="planet-header">
-              <h2 class="earth">Earth</h2>
-              <span class="planet-type">Terrestrial</span>
+              <h2 class="earth" id="planetName">Earth</h2>
+              <span class="planet-type" id="planetType">Terrestrial</span>
             </div>
 
             <div class="description">
-              <p class="description-text">
+              <p class="description-text" id="planetDescription">
                 The only known planet to support life, with liquid water on its
                 surface.
               </p>
@@ -103,15 +114,15 @@
             <div class="main-stats">
               <div class="stat">
                 <span class="stat-span">Gravity</span>
-                <strong class="stat-strong">9.8</strong>
+                <strong class="stat-strong" id="planetGravity">9.8</strong>
               </div>
               <div class="stat">
                 <span class="stat-span">Mass</span>
-                <strong class="stat-strong">0.00315</strong>
+                <strong class="stat-strong" id="planetMass">0.00315</strong>
               </div>
               <div class="stat">
                 <span class="stat-span">Period</span>
-                <strong class="stat-strong">365</strong>
+                <strong class="stat-strong" id="planetPeriod">365</strong>
               </div>
             </div>
 
@@ -123,7 +134,7 @@
                     alt="Thermometer icon"
                     class="img-stats"
                   />
-                  <span class="span">288</span>
+                  <span class="span" data-field="temperature">288</span>
                 </div>
                 <div class="detail">
                   <img
@@ -131,7 +142,7 @@
                     alt="Moon icon"
                     class="img-stats"
                   />
-                  <span class="span">1</span>
+                  <span class="span" data-field="moons">1</span>
                 </div>
                 <div class="detail2">
                   <img
@@ -139,9 +150,10 @@
                     alt="Moon icon"
                     class="img-stats"
                   />
-                  <span class="span">1</span>
+                  <span class="span" data-field="moons">1</span>
                 </div>
               </div>
+
               <div class="blog">
                 <div class="detail">
                   <img
@@ -149,7 +161,7 @@
                     alt="Diameter icon"
                     class="img-stats"
                   />
-                  <span class="span">12756</span>
+                  <span class="span" data-field="diameter">12756</span>
                 </div>
                 <div class="detail2">
                   <img
@@ -157,7 +169,7 @@
                     alt="Diameter icon"
                     class="img-stats"
                   />
-                  <span class="span">12756</span>
+                  <span class="span" data-field="diameter">12756</span>
                 </div>
                 <div class="detail">
                   <img
@@ -165,7 +177,7 @@
                     alt="Sun icon"
                     class="img-stats"
                   />
-                  <span class="span">288</span>
+                  <span class="span" data-field="distance">149.6</span>
                 </div>
                 <div class="detail3">
                   <img
@@ -173,7 +185,7 @@
                     alt="Sun icon"
                     class="img-stats"
                   />
-                  <span class="span">288</span>
+                  <span class="span" data-field="distance">149.6</span>
                 </div>
               </div>
             </div>
@@ -199,7 +211,7 @@
               <tr>
                 <th colspan="2" scope="col" class="radi">Group</th>
                 <th scope="col">Name</th>
-                <th scope="col">Mass (10<sup>24</sup> kg)</th>
+                <th scope="col" class="name">Mass (10<sup>24</sup> kg)</th>
                 <th scope="col" class="radis">Diameter (km)</th>
               </tr>
             </thead>
@@ -209,22 +221,22 @@
                   Terrestrial planets
                 </th>
                 <td>Mercury</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
               <tr>
                 <td>Venus</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
               <tr>
                 <td>Earth</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
               <tr>
                 <td>Mars</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
 
@@ -236,12 +248,12 @@
                   Gas giants
                 </th>
                 <td>Jupiter</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
               <tr>
                 <td>Saturn</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
               <tr>
@@ -249,12 +261,12 @@
                   Ice giants
                 </th>
                 <td>Uranus</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
               <tr>
                 <td>Neptune</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td>4,879</td>
               </tr>
 
@@ -263,7 +275,7 @@
                   Dwarf planets
                 </th>
                 <td>Pluto</td>
-                <td>0.330</td>
+                <td class="name">0.330</td>
                 <td class="radius">4,879</td>
               </tr>
             </tbody>
@@ -274,12 +286,11 @@
       <footer>
         <div>
           <h2 class="h2">About</h2>
-          <p class="name">Contributor's name</p>
-          <p class="name">Contributor's name</p>
-          <p class="name">Contributor's name</p>
-          <p class="name">Contributor's name</p>
-          <p class="name">Contributor's name</p>
-          <p class="name">Contributor's name</p>
+          <p class="names">Ogunjobi Olamide</p>
+          <p class="names">Fadesere Oluwapelumi</p>
+          <p class="names">Aderohunmu Simon</p>
+          <p class="names">Ogunremi Semilore</p>
+          <p class="names">Bello Zainab Olaadura</p>
         </div>
         <div class="section">
           <p class="footer">
@@ -287,9 +298,9 @@
             <a href="http://amakandukwu.com/" class="link">Amaka N</a>
           </p>
           <p class="footer">
-            Built by TS_Academy_Group_17. All rights reserved.
+            Built by <a href="https://github.com/Mi-dels/TS_Capstone_Project_Group_17" class="link">TS_Academy_Group_17</a>. All rights reserved.
           </p>
-          <p class="footer">TSAcademy</p>
+          <a href="http://tsacademy.com/" class="link">TSAcademy</a>
         </div>
       </footer>
     </section>
