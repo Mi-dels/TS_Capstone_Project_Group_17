@@ -499,5 +499,152 @@ footer {
     max-width: 704px;
   }
 }
+/* Phone responsiveness (375px frame, 343px container) */
 
+@media screen and (max-width: 375px) {
+  body {
+    padding: 20px 16px;
+  }
+  .container {
+    max-width: 343px;
+  }
+
+  .switch {
+    width: 82px;
+  }
+
+  /* search */
+  .search-container {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+  .search-icon {
+    width: 20px;
+  }
+  .search-name {
+    gap: 15px;
+  }
+  input {
+    font-size: var(--font-size-xs);
+    line-height: 140%;
+  }
+  #searchStatus {
+    font-size: 11px;
+  }
+  .btn {
+    width: 99px;
+  }
+
+  /* error card */
+  .error-message {
+    padding: 36px 20px;
+  }
+
+  /* hero becomes a grid */
+  .hero {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-areas:
+      "img   header"
+      "desc  desc"
+      "main  main"
+      "other other";
+    gap: 0 16px;
+    align-items: start;
+    padding: 40px 24px;
+  }
+  .planet-card {
+    display: contents;
+  }
+  .planet-image {
+    grid-area: img;
+  }
+  .space-img {
+    width: 70px;
+    height: 70px;
+  }
+  .planet-header {
+    grid-area: header;
+    gap: 5px;
+    margin-bottom: 0;
+    align-self: center;
+  }
+  .description {
+    grid-area: desc;
+    margin: 24px 0 20px;
+  }
+  .description-text {
+    max-width: none;
+    margin-bottom: 0;
+  }
+  .main-stats {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .other-stats {
+    grid-area: other;
+    gap: 12px;
+  }
+  .location,
+  .blog {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* facts + table */
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+  .facts {
+    font-size: var(--font-size-sm);
+  }
+  .figcaption {
+    font-family: var(--table-and-footer-font);
+    font-size: var(--font-size-base);
+    font-style: var(--font-weight-semibold);
+    /* margin-top: 24px;
+    margin-bottom: 16px; */
+    letter-spacing: -2%;
+    line-height: 150%;
+  }
+  .hide {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+  th,
+  td {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+  }
+  table {
+    border-width: 2px;
+  }
+  thead th {
+    height: 40px;
+    font-size: 11px;
+  }
+  .row-group {
+    width: auto;
+    font-size: 11px;
+  }
+  td {
+    height: 39px;
+    font-size: 11px;
+  }
+
+  /* footer */
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .h2 {
+    margin-bottom: 16px;
+  }
+}
 
