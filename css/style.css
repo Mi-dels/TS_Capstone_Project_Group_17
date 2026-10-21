@@ -110,7 +110,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 86px;
+  width: 70px;
   height: 20px;
   border-radius: 6px;
   cursor: pointer;
@@ -457,6 +457,9 @@ footer {
   font-size: var(--font-size-base);
   line-height: 150%;
   letter-spacing: -0.02em;
+  display: block;
+  text-decoration: none;
+  color: var(--dark-footer-section);
 }
 .footer {
   font-size: var(--font-size-base);
@@ -483,7 +486,7 @@ footer {
 
 /* Phone responsiveness (375px frame, 343px container) */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   body {
     padding: 20px 16px;
   }
@@ -492,7 +495,7 @@ footer {
   }
 
   .switch {
-    width: 82px;
+    width: 70px;
   }
 
   /* search */
