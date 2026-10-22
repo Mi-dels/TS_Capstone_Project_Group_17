@@ -96,3 +96,13 @@ https://tscapstoneprojectgroup17.vercel.app/
 | Ogunjobi Olamide      | Javascript | Build the Javascript                                     |
 | Fadesere Oluwapelumi  | Javascript | Build the Javascript                                     |
 | Aderohunmu Simon      | Javascript | Build the Javascript                                     |
+
+## Authors Github Profile Page
+
+| Name                  | Github Profile Page               | Role                  |
+| --------------------- | --------------------------------- | --------------------- |
+| Aderohunmu Simon      | https://github.com/Saiim0n        | Team member           |
+| Fadesere Oluwapelumi  | https://github.com/LummieGit      | Assistant Team Leader |
+| Ogunjobi Olamide      | https://github.com/Mi-dels        | Team Leader           |
+| Bello Zainab Olaadura | https://github.com/Olaadura28     | Team member           |
+| Ogunremi Semilore     | https://github.com/Webnest-glitch | Team member           |
